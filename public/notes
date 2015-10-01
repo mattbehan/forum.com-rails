@@ -1,0 +1,9 @@
+Should change the questions tags stuff to use the actual model and not virtual attributes
+
+Should the before_action methods ultimately lie in the application controller? or in some helper?
+
+Add errors to user create view
+
+When users fails to save, the form gets re-rendered
+
+add layouts/header and layouts/footer in layout, render them with partials

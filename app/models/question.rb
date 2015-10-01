@@ -11,6 +11,16 @@ class Question < ActiveRecord::Base
   validates :title, presence: true
   validates :body, presence: true
 
+  def question_tags
+  end
+
+  def question_tags=(names)
+    names.each do |name|
+      tag = Tag.find_or_create_by(name: name)
+      self.taggings.create(tag_id: tag.id)
+    end
+  end
+
   def has_user_voted_on_this_before? user_id
     votes.find_by(user_id: user_id) != nil
   end

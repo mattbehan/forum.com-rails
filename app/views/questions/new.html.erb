@@ -1,0 +1,14 @@
+
+
+<%= form_for @question do |f|%>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+
+  <%= f.text_area :question_tags, placeholder: "Enter any tags for your question here" %>
+  <%= f.submit %>
+<% end %>
+
+link_to("Home", root_path)
